@@ -13,12 +13,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Messages\Commands\" />
-    <Folder Include="Messages\Handlers\" />
-    <Folder Include="Messages\Queries\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\iLearning.SimpleChat.Domain\iLearning.SimpleChat.Domain.csproj" />
     <ProjectReference Include="..\iLearning.SimpleChat.Infrastructure\iLearning.SimpleChat.Infrastructure.csproj" />
   </ItemGroup>

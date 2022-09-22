@@ -9,5 +9,6 @@ public class Message : IEntity
     public User From { get; set; }
     public int ToId { get; set; }
     public User To { get; set; }
+    public string Theme { get; set; }
     public string Content { get; set; }
 }
