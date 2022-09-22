@@ -10,4 +10,9 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\iLearning.SimpleChat.Application\iLearning.SimpleChat.Application.csproj" />
+    <ProjectReference Include="..\iLearning.SimpleChat.Infrastructure\iLearning.SimpleChat.Infrastructure.csproj" />
+  </ItemGroup>
+
 </Project>
