@@ -1,6 +1,5 @@
 ﻿using iLearning.SimpleChat.Application.Users.Commands;
 using iLearning.SimpleChat.Application.Users.Queries;
-using iLearning.SimpleChat.Domain.Entities;
 using Microsoft.AspNetCore.Mvc;
 
 namespace iLearning.SimpleChat.API.Controllers;
