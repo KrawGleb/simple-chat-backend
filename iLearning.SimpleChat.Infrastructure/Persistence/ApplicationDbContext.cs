@@ -11,4 +11,21 @@ public class ApplicationDbContext : DbContext
 
 	public DbSet<User> Users { get; set; }
 	public DbSet<Message> Messages { get; set; }
+
+	protected override void OnModelCreating(ModelBuilder modelBuilder)
+	{
+		modelBuilder
+			.Entity<Message>()
+			.HasOne(m => m.From)
+			.WithMany()
+			.OnDelete(DeleteBehavior.NoAction);
+			
+		modelBuilder
+			.Entity<Message>()
+			.HasOne(m => m.To)
+			.WithMany()
+			.OnDelete(DeleteBehavior.NoAction);
+
+		base.OnModelCreating(modelBuilder);
+	}
 }
