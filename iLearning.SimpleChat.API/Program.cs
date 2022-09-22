@@ -1,3 +1,4 @@
+using iLearning.SimpleChat.API.Hubs;
 using iLearning.SimpleChat.Application;
 using iLearning.SimpleChat.Infrastructure;
 
@@ -7,6 +8,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddInfrastructure(builder.Configuration);
 builder.Services.AddApplication();
 
+builder.Services.AddSignalR();
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("CorsPolicy", p => p
@@ -37,5 +39,6 @@ app.UseCors("CorsPolicy");
 app.UseAuthorization();
 
 app.MapControllers();
+app.MapHub<AppHub>("/hub");
 
 app.Run();
